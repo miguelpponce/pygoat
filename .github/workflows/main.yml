@@ -1,0 +1,24 @@
+name: MiAction
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  bienvenido:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Mostrar mensaje de bienvenida
+      run: echo "Hola Amigo"
+
+    - name: Mostrar fecha actual
+      run: date
+
+    - name: mostrar contenido del directorio
+      run: ls -la
